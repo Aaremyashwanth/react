@@ -1,5 +1,7 @@
 import data from "./data"
 import './App.css'
+import List from "./component/List"
+
 
 function App() {
   
@@ -11,11 +13,7 @@ function App() {
       {data.map(({id,name,email,body})=>{
         return( 
         <>
-        <li key={id}>
-          <h3>{name}</h3>
-          <h3>{email}</h3>
-          <p>{body}</p>
-        </li>
+        <List key={id}name={name}email={email}body={body} ></List>
         </>)
       })}
       
